@@ -1,0 +1,37 @@
+diff --git a/make.py b/make.py
+index 4d3db41..7cab1fc 100755
+--- a/make.py
++++ b/make.py
+@@ -315,6 +315,24 @@ class VersaECP5(Board):
+             "spiflash",
+         }, bitstream_ext=".bit")
+ 
++# ECP5 evn support -------------------------------------------------------------------------------
++
++class ECP5evn(Board):
++    soc_kwargs = {
++        #"l2_size" : 2048,          # Use Wishbone and L2 for memory accesses.
++        #"x5_clk_freq" : 50000000,  # Use X5
++        #"with_scope" : True,       # Use LiteScope
++    }
++    def __init__(self):
++        from litex_boards.targets import ecp5_evn
++        Board.__init__(self, ecp5_evn.BaseSoC, soc_capabilities={
++            # Communication
++            "serial",
++            "ethernet",
++            # Storage
++            #"spiflash",
++        }, bitstream_ext=".bit")
++
+ # ULX3S support ------------------------------------------------------------------------------------
+ 
+ class ULX3S(Board):
+@@ -516,6 +534,7 @@ supported_boards = {
+     "trellisboard":    TrellisBoard,
+     "ecpix5":          ECPIX5,
+     "colorlight_i5":   Colorlight_i5,
++    "ecp5_evn":        ECP5evn,
+ 
+     # Altera/Intel
+     "de0nano":         De0Nano,
