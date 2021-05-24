@@ -31,14 +31,13 @@ adjusted for "GBE" settings of DCU instead of "10BSER" ones.
 
 ## linux-on-litex-vexriscv
 
-linux-on-litex-vexriscv/ecp5_evn-sdram-sgmii.patch is a patch to add this kit as the [linux-on-litex-vexriscv](https://github.com/litex-hub/linux-on-litex-vexriscv) target. With this patch,
+linux-on-litex-vexriscv/ecp5_evn-sdram-sgmii.patch is a patch to add this kit as the [linux-on-litex-vexriscv](https://github.com/litex-hub/linux-on-litex-vexriscv) target. With this patch, for example,
 
 ```
 ./make.py --board ecp5_evn --cpu-count 4 --local-ip 10.253.253.95 --remote-ip 10.253.253.8 --build --load
 ```
 
 will gives a linux capable RV32 SoC with 4 CPUs.
---
 
 ## Images
 
