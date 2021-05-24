@@ -23,11 +23,11 @@ litex-boards/lattice_ecp5_evn-sdram-sgmii.patch is a patch which adds the suppor
 
 ## addend to liteeth
 
-liteeth/ecp5sgmii.py gives a support for SGMII PHY. Tested on my home-brewed board with TI DP83867S PHY chip. TI offers their evaluation board DP83867ERGZ-S-EVM for that chip.
+liteeth/ecp5sgmii.py gives a support for SGMII PHY. Tested on my home-brewed board with TI DP83867S PHY chip. TI offers their evaluation board [DP83867ERGZ-S-EVM](https://www.ti.com/tool/DP83867ERGZ-S-EVM) for that chip.
 
 ecp5sgmii.py is simply
-(liteeth pcs_1000basex.py + liteiclink serdes_ecp5.py)
-adjusted for "GBE" settings of DCU instead of "10BSER" ones.
+([liteeth](https://github.com/enjoy-digital/liteeth) pcs_1000basex.py + [liteiclink](https://github.com/enjoy-digital/liteiclink) serdes_ecp5.py)
+reduced and adjusted for "GBE" settings of DCU instead of "10BSER" ones.
 
 ## linux-on-litex-vexriscv
 
