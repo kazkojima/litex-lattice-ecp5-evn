@@ -2,6 +2,8 @@
 
 Files to support litex on Lattice LEF5UM5G-85G board with [SDRAM addon](https://github.com/kazkojima/ecp5evn-sdram-addon) and [SGMII PHY](https://github.com/kazkojima/dp83867s-sgmii-board).
 
+**Everything here is experimental.**
+
 ##  litex-boards patch
 
 This repo is structured as below.
@@ -21,9 +23,9 @@ This repo is structured as below.
 
 litex-boards/lattice_ecp5_evn-sdram-sgmii.patch is a patch which adds the supports for SDRAM addon and SGMII PHY to the lattice_ecp5_evn platform.
 
-## addend to liteeth
+## Addend to liteeth
 
-liteeth/ecp5sgmii.py gives a support for SGMII PHY. Tested on my home-brewed board with TI DP83867S PHY chip. TI offers their evaluation board [DP83867ERGZ-S-EVM](https://www.ti.com/tool/DP83867ERGZ-S-EVM) for that chip.
+liteeth/ecp5sgmii.py gives a support for SGMII PHY. Tested on my [home-brewed board with TI DP83867S PHY chip](https://github.com/kazkojima/dp83867s-sgmii-board). TI offers their full-featured evaluation board [DP83867ERGZ-S-EVM](https://www.ti.com/tool/DP83867ERGZ-S-EVM) for that chip.
 
 ecp5sgmii.py is simply
 ([liteeth](https://github.com/enjoy-digital/liteeth) pcs_1000basex.py + [liteiclink](https://github.com/enjoy-digital/liteiclink) serdes_ecp5.py)
